@@ -1450,9 +1450,26 @@ gap: 30px;
 
 @media (max-width: 450px) {
  .services {
-  grid-template-columns: 1fr;
-}
+    grid-template-columns: 1fr; /* single column */
+    gap: 16px;
+    padding: 16px;
+  }
 
+  /* Reset ALL grid positioning */
+  .service-card,
+  .service-card:nth-child(4),
+  .service-card:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  .service-card {
+    padding: 24px; /* slightly tighter for mobile */
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    padding-bottom: 16px;
+  }
 }
 
 
