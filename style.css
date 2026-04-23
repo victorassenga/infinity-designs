@@ -1442,6 +1442,9 @@ gap: 30px;
   margin-right: auto;
   font-weight: lighter;
 }
+.services {
+  grid-template-columns: 1fr;
+}
   
 }
 
