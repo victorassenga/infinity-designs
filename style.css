@@ -1447,7 +1447,7 @@ gap: 30px;
 
 @media (max-width: 450px) {
  .services {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .service-card,
