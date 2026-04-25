@@ -1315,7 +1315,7 @@ align-items: center;
 }
 
 .about-values {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 0 20px 80px;
 }
 
