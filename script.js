@@ -104,7 +104,8 @@ setInterval(showNextMedia, 8000);
 //FILTER ANIMATION
 
 const buttons = document.querySelectorAll(".work-categories li");
-const items = document.querySelectorAll(".work-item, work-info");
+const items = document.querySelectorAll(".work-item");
+
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
@@ -167,6 +168,29 @@ buttons.forEach(button => {
 
   });
 });
+
+
+
+
+// Get filter from URL
+const params = new URLSearchParams(window.location.search);
+const urlFilter = params.get("filter");
+
+if (urlFilter) {
+  // Find matching button
+  const targetBtn = document.querySelector(
+    `.work-categories li[data-filter="${urlFilter}"]`
+  );
+
+  if (targetBtn) {
+    targetBtn.click(); // trigger your existing filter logic
+  }
+}
+
+
+
+
+
 
 
 // TESTIMONIAL SCROLL
