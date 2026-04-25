@@ -66,31 +66,31 @@
                     
                     <h1 class="contact-title">Let’s Build Something Scalable</h1>
 
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/mnjlweqd" method="POST" enctype="multipart/form-data">
                     
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" placeholder="Your name" required>
-                    </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" placeholder="+255..." required>
-                    </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="phone" placeholder="+255..." required>
+                        </div>
 
-                    <div class="form-group full">
-                        <label>Message</label>
-                        <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
-                    </div>
+                        <div class="form-group full">
+                            <label>Message</label>
+                            <textarea rows="5" name="message" placeholder="Tell us about your project..." required></textarea>
+                        </div>
 
-                    <div class="form-group full file">
-                        <label>Attachment (optional)</label>
-                        <input type="file">
-                    </div>
+                        <div class="form-group full file">
+                            <label>Attachment (optional)</label>
+                            <input type="file" name="attachment">
+                        </div>
 
-                    <div class="form-group full">
-                        <button type="submit" class="submit-btn">Send Request</button>
-                    </div>
+                        <div class="form-group full">
+                            <button type="submit" class="submit-btn">Send Request</button>
+                        </div>
 
                     </form>
 
