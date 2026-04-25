@@ -1286,7 +1286,7 @@ align-items: center;
 }
 
 .founders-images {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .founder-card img {
