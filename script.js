@@ -104,7 +104,7 @@ setInterval(showNextMedia, 8000);
 //FILTER ANIMATION
 
 const buttons = document.querySelectorAll(".work-categories li");
-const items = document.querySelectorAll(".work-item");
+const items = document.querySelectorAll(".work-item, work-info");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
