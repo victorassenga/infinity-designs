@@ -3,19 +3,18 @@
 // NAV UNDERLINE (ACTIVE + HOVER)
 const links = document.querySelectorAll(".nav a");
 const underline = document.querySelector(".underline");
-const nav = document.querySelector(".nav");
+const navContainer = document.querySelector(".nav");
 
 links.forEach(link => {
   link.addEventListener("mouseenter", (e) => {
     const rect = e.target.getBoundingClientRect();
-    const parent = nav.getBoundingClientRect();
+    const parent = navContainer.getBoundingClientRect();
 
     underline.style.width = rect.width + "px";
     underline.style.left = rect.left - parent.left + "px";
   });
 });
 
-const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav");
 
 // CREATE OVERLAY (only once)
@@ -23,18 +22,7 @@ const overlay = document.createElement("div");
 overlay.classList.add("overlay");
 document.body.appendChild(overlay);
 
-// TOGGLE MENU
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-  overlay.classList.toggle("active");
-});
 
-
-// CLOSE WHEN CLICK OUTSIDE
-overlay.addEventListener("click", () => {
-  closeMenu();
-});
 
 // CLOSE WHEN CLICKING LINKS
 document.querySelectorAll(".nav a").forEach(link => {
@@ -44,11 +32,14 @@ document.querySelectorAll(".nav a").forEach(link => {
 });
 
 // FUNCTION (cleaner structure)
-function closeMenu() {
-  hamburger.classList.remove("active");
+ function closeMenu() {
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
+  toggle.textContent = "MENU";
+  document.body.classList.remove("menu-open");
+  overlay.classList.toggle("active");
 }
+
 
 
 // MAGNETIC BUTTON IMPROVED
@@ -219,4 +210,23 @@ slider.addEventListener("touchmove", (e) => {
   const x = e.touches[0].pageX;
   const walk = (x - startX) * 1.5;
   slider.scrollLeft = scrollLeft - walk;
+});
+
+
+
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+
+  if (nav.classList.contains("active")) {
+    toggle.textContent = "CLOSE";
+    document.body.classList.add("menu-open");
+  } else {
+    toggle.textContent = "MENU";
+    document.body.classList.remove("menu-open");
+  }
 });
