@@ -776,7 +776,7 @@ body.menu-open {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 24px;
+    padding: 24px;
 
     transform: translateY(-100%);
     transition: transform 0.5s ease;
@@ -786,6 +786,7 @@ body.menu-open {
   .nav.active {
     transform: translateY(0);
     top: 50px;
+    justify-content: flex-start;
   }
 
   /* Links left aligned */
