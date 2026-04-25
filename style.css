@@ -825,6 +825,9 @@ body.menu-open {
     display: block;
     background: #328eb8;
   }
+  .nav a {
+  text-decoration: none;
+  color: #fafafa;
 
   .cta-btn {
     display: none;
