@@ -307,6 +307,7 @@ grid-template-columns: 1fr;
  background: #ccc;
  overflow: hidden;
  transition: transform 0.4s ease;
+ height: 480px;
 }
 
 .large { grid-column: span 2;  }
@@ -424,6 +425,9 @@ grid-template-columns: 1fr;
   height: 480px;
   overflow: hidden;
   transition: transform 0.4s ease;
+}
+.work-item-media {
+  height: auto;
 }
 
   .work-item {
