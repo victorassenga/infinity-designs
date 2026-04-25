@@ -1506,7 +1506,7 @@ padding: 60px 0px 0px;
   grid-column: 4 / span 2;
 }
 
-/* 📱 Mobile: 1 column */
+/* SERVICES MOBILE */
 @media (max-width: 900px) {
   .services-hero{
   padding: 120px 12px 60px;
@@ -1553,7 +1553,7 @@ padding: 60px 0px 0px;
 
 @media (max-width: 450px) {
  .services {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .service-card,
