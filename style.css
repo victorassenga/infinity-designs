@@ -1536,6 +1536,7 @@ padding: 60px 0px 0px;
 }
 .services {
   padding: 0px 12px 60px;
+  grid-template-columns: 1fr;
 }
 
 .service-card {
@@ -1548,20 +1549,14 @@ padding: 60px 0px 0px;
    background: #fafafa;
   color: #191919;
 }
-  
-}
-
-@media (max-width: 450px) {
- .services {
-  grid-template-columns: 1fr;
-}
-
-.service-card,
+  .service-card,
 .service-card:nth-child(4),
 .service-card:nth-child(5) {
   grid-column: 1 / -1;
 }
+  
 }
+
 
 
 
